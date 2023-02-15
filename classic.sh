@@ -1,4 +1,5 @@
 #!/bin/bash
+/bin/clear
 
 #	DECLARATIONS	#
 argsmod=$(git status | grep -A1 'modified:' | sed 's/^.*: //' | tr -d '\n')
@@ -27,18 +28,8 @@ fi
 git commit -m "$p_argsmod $p_comment $p_argsadd $p_argsdel"
 
 #	PUSH		#
-echo "push now ? (yes/a)"
-read temp
-if [ -z $temp ];then
-	echo "waiting to push..."
-	exit 0
-elif [ $temp == "yes" ];then
-	git push
-	echo "=============================="
-	echo "| git folder has been pushed |"
-	echo "=============================="
-	exit 0
-else
-	echo "waiting to push..."
-	exit 0
-fi
+git push
+echo "=============================="
+echo "| git commit has been pushed |"
+echo "=============================="
+exit 0
