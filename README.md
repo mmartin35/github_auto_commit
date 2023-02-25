@@ -1,11 +1,9 @@
 # Table of Contents
-## Git autopush
+## Github auto commit format
 ### Installation
 Clone the repository using the following command:<br>
-`git clone git@github.com:mmartin35/autopush.git`
+`git clone git@github.com:mmartin35/github_auto_commit.git`
 ### Usage
-There are 2 programs: 
-- classic.sh automatically formats the commit (`./classic.sh`)
-- manual.sh manually formats the commit (`./manual.sh`)
+- auto_commit.sh automatically formats the commit (`./classic.sh`)
 ### License
 No license is needed.
