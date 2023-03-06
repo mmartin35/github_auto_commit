@@ -32,11 +32,10 @@ p_comment="> comment: $comment "
 }
 
 _get_branch() {
-echo "which branch to push ?"
 while [ -z $branch_name ]
 do
+	echo "which branch to push ?"
 	read branch_name
-	branch_name="main"
 done
 }
 
@@ -56,6 +55,7 @@ if [ $status == "y" ];then
 	_get_git_status
 	_insert_comment
 	_check_empty_args
+	_get_branch
 	_format_and_push
 	exit 0
 else
